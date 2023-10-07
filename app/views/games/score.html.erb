@@ -1,0 +1,14 @@
+<h1>score</h1>
+
+<% if @included %>
+  <% if @english_word %>
+    <h2>CONGRATULATIONS <%= @word %> is valid </h2>
+  <% else %>
+    <h2>NOOOOO SIR <%= @word %> is not a valid English word</h2>
+  <% end %>
+<% else %>
+  <h2> You can not make <%= @word %> with these letters:<%= @letters %></h2>
+<% end %>
+
+
+<%= link_to "play again", new_path %>
